@@ -1,0 +1,42 @@
+# ============
+# Frontend (Next.js)
+# ============
+# Node modules, build outputs, and environment files
+/frontend/**/node_modules/
+/frontend/**/.next/
+/frontend/**/out/
+/frontend/**/.env.local
+/frontend/**/.env.*.local
+/frontend/**/next-env.*
+/frontend/**/npm-debug.log*
+/frontend/**/yarn-debug.log*
+/frontend/**/yarn-error.log*
+
+# ============
+# Backend (Django)
+# ============
+# Byte-compiled files and caches
+/backend/**/__pycache__/
+/backend/**/*.py[cod]
+
+# Django-specific files
+/backend/**/staticfiles/
+/backend/**/media/
+
+# Virtual environments (adjust folder names as needed)
+/backend/**/venv/
+/backend/**/.venv/
+/backend/**/env/
+
+# Environment variable files
+/backend/**/.env
+/backend/**/.env.*
+
+# ============
+# General
+# ============
+# System files and temporary files
+.DS_Store
+*.log
+*.pid
+*.swp
