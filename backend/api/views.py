@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from api.models import Note
 from django.contrib.auth.models import User
 
@@ -18,6 +17,7 @@ class CustomTokenObtainPairView(TokenObtainPairView):
         try:
           response = super().post(request, *args, **kwargs)
           tokens = response.data
+          print(response)
 
           access_token = tokens['access']
           refresh_token = tokens['refresh']
@@ -96,6 +96,7 @@ def logout(request):
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])
 def is_authenticated(request):
+   print("authenticated")
    return Response({'authenticated': True}, status=status.HTTP_200_OK)
 
 
